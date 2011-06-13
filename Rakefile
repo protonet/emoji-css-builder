@@ -12,7 +12,7 @@ task :emoji do
   EmojiCSSBuilder.build(ENV['SET'].to_sym, ENV['DEST'], icons)
 
   name = "emoji-#{ENV['SET']}"
-  %w(gif css html).each do |ext|
+  %w(png css html).each do |ext|
     puts "Wrote #{ENV['DEST']}/#{name}.#{ext}"
   end
 end

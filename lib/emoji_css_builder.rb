@@ -20,7 +20,7 @@ module EmojiCSSBuilder
     css.push <<-END
 .emoji {
   display: inline-block;
-  background: url("emoji-#{emoji_set}.gif") top left no-repeat;
+  background: url("emoji-#{emoji_set}.png") top left no-repeat;
   width: 20px;
   height: 20px;
   vertical-align: middle;
@@ -67,6 +67,6 @@ window.onload = function() {
 END
     end
 
-    # Dir["#{destination}/*.png"].each { |f| File.unlink(f) }
+    Dir["#{destination}/e_*.png"].each { |f| File.unlink(f) }
   end
 end
