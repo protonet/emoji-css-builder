@@ -35,7 +35,7 @@ END
     end
     css = css.join("\n")
 
-    s = %(montage "#{destination}/e_*.png" -tile x#{icons.size} -geometry 20x20 "#{destination}/emoji-#{emoji_set}.gif")
+    s = %(montage "#{destination}/e_*.png" -background none -tile x#{icons.size} -geometry 20x20 "#{destination}/emoji-#{emoji_set}.png")
     %x{#{s}}
 
     File.open "#{destination}/emoji-#{emoji_set}.css", 'w' do |f|
@@ -67,6 +67,6 @@ window.onload = function() {
 END
     end
 
-    Dir["#{destination}/*.png"].each { |f| File.unlink(f) }
+    # Dir["#{destination}/*.png"].each { |f| File.unlink(f) }
   end
 end
