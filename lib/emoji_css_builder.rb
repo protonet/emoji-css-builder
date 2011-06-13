@@ -31,7 +31,7 @@ END
       FileUtils.cp \
         File.join(ASSET_PATH, emoji_set.to_s, "#{code}.png"), 
         File.join(destination, "e_#{(index+1).to_s.rjust(5, '0')}.png")
-      css << ".emoji_#{code} { background-position: 0px #{index * -20}px; }"
+      css << ".emoji_#{code} { background-position: 0 #{index * -20}px; }"
     end
     css = css.join("\n")
 
